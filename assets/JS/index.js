@@ -102,8 +102,21 @@ function Product(name, price, quantity) {
   this.quantity = quantity;
 }
 
-  for (i=0; i<5; i++) {
-    let product = new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*10));
-    stock.push(product);
+  for (i=0; i < 5; i++) {
+    stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*10)));
   }
   console.log(stock);
+
+// 14. * Написать функцию которая будет фильтровать массив продуктов по количеству на складе больше 5 шт . 
+// И потом сортировать по возрастанию цены. (filter().sort()).
+// Функция возвращает новый массив - результат фильтрации.
+
+console.log(stock.at(0).quantity);
+
+// function sortProduct () {
+//   const result = stock.filter((product) => {
+//     product.quantity > 5;
+//   });
+// }
+
+// sortProduct()
