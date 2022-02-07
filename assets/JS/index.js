@@ -73,20 +73,37 @@
 // 11. Создать массив с числами от 1 до 10. На основе него 
 // создать массив квадратов значений (map).
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
+// const arr = [1,2,3,4,5,6,7,8,9,10];
 
-console.log(arr);
+// console.log(arr);
 
-const map = arr.map (elem => Math.pow(elem, 2));
+// const map = arr.map (elem => Math.pow(elem, 2));
 
-console.log(map);
+// console.log(map);
 
 // 12. Перевести массив из предыдущего задания в строку, 
 // с разделителем " && " (join)
 
-const strMap = map.join( " && ");
+// const strMap = map.join( " && ");
 
-console.log(strMap);
+// console.log(strMap);
 
 /////////////////////////////////////////////////////////////////////////
 
+// 13. * Создать массив Склада. Заполнить массив от 3 до 5 продуктами
+// Каждый продукт имеет свойства - наименование, базовая цена, 
+// колво на складе.
+
+const stock = [];
+
+function Product(name, price, quantity) {
+  this.name = name;
+  this.price = price;
+  this.quantity = quantity;
+}
+
+  for (i=0; i<5; i++) {
+    let product = new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*10));
+    stock.push(product);
+  }
+  console.log(stock);
