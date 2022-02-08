@@ -122,18 +122,31 @@ const funcResult = sortProduct();
 // console.log(funcResult);
 
 // 15. * Создать массив для Корзины покупок.
-// Спрашивать у пользователя ИД продукта (индекс массива склада) который он хочет положить в Корзину покупок.
-// Клонировать_ в Корзину обьект продукта, взятый из массива Склада (по ИД выбранному пользователем).
+// Спрашивать у пользователя ИД продукта (индекс массива склада) 
+// который он хочет положить в Корзину покупок.
+// Клонировать_ в Корзину обьект продукта, взятый из массива Склада 
+// (по ИД выбранному пользователем).
 
-const basket = [];
+// const basket = [];
 
-const idUser = prompt('Укажите id продукта');
+// const idUser = prompt('Укажите id продукта');
 
-function userBasket(id) {
-  basket.push(stock.at(id));
-  return basket;
+// function userBasket(id) {
+//   basket.push(stock.at(id));
+//   return basket;
+// }
+
+// const resultBasket = userBasket(idUser);
+
+// console.log(resultBasket);
+
+// 16. * Создать функ. конструктор Пользователь.
+// Принимать параметры - username, age, isMale, password.
+
+// Циклом создать 5 пользователей (new User) и поместить каждого в массив users.
+// Имена, возрасты, пол, и пароль случайны (пусть зависят от индекса 
+// ("username1", "username2" ...)
+
+function User(name, age, ) {
+
 }
-
-const resultBasket = userBasket(idUser);
-
-console.log(resultBasket);
