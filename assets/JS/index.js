@@ -94,30 +94,30 @@
 // Каждый продукт имеет свойства - наименование, базовая цена, 
 // колво на складе.
 
-const stock = [];
+// const stock = [];
 
-function Product(name, price, quantity) {
-  this.name = name;
-  this.price = price;
-  this.quantity = quantity;
-}
+// function Product(name, price, quantity) {
+//   this.name = name;
+//   this.price = price;
+//   this.quantity = quantity;
+// }
 
-  for (i=0; i < 5; i++) {
-    stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*15)));
-  }
-  console.log(stock);
+//   for (i=0; i < 5; i++) {
+//     stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*15)));
+//   }
+//   console.log(stock);
 
 // 14. * Написать функцию которая будет фильтровать массив продуктов по количеству на складе больше 5 шт . 
 // И потом сортировать по возрастанию цены. (filter().sort()).
 // Функция возвращает новый массив - результат фильтрации.
 
-function sortProduct () {
-  const result = stock.filter(value => (value.quantity > 5)); // Фильтрация по количеству
-  result.sort((a, b) => (a.price) - (b.price)); // Сортировка по возрастанию цены
-  return result;
-};
+// function sortProduct () {
+//   const result = stock.filter(value => (value.quantity > 5)); // Фильтрация по количеству
+//   result.sort((a, b) => (a.price) - (b.price)); // Сортировка по возрастанию цены
+//   return result;
+// };
 
-const funcResult = sortProduct();
+// const funcResult = sortProduct();
 
 // console.log(funcResult);
 
@@ -147,6 +147,18 @@ const funcResult = sortProduct();
 // Имена, возрасты, пол, и пароль случайны (пусть зависят от индекса 
 // ("username1", "username2" ...)
 
-function User(name, age, ) {
+function User(username, age, isMale, password) {
+  this.username = username
+  this.age = age
+  this.isMale = isMale
+  this.password = password
+};
 
-}
+const users = [];
+
+for (i = 0; i < 5; i++) {
+  let user = new User(`username${i}`, Math.floor(Math.random() * (40 - 20 + 1)) + 20, Boolean(Math.round(Math.random())), `password${i}`);
+  users.push(user);
+};
+
+console.log(users);
