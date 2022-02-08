@@ -119,4 +119,21 @@ function sortProduct () {
 
 const funcResult = sortProduct();
 
-console.log(funcResult);
+// console.log(funcResult);
+
+// 15. * Создать массив для Корзины покупок.
+// Спрашивать у пользователя ИД продукта (индекс массива склада) который он хочет положить в Корзину покупок.
+// Клонировать_ в Корзину обьект продукта, взятый из массива Склада (по ИД выбранному пользователем).
+
+const basket = [];
+
+const idUser = prompt('Укажите id продукта');
+
+function userBasket(id) {
+  basket.push(stock.at(id));
+  return basket;
+}
+
+const resultBasket = userBasket(idUser);
+
+console.log(resultBasket);
