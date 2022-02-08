@@ -103,7 +103,7 @@ function Product(name, price, quantity) {
 }
 
   for (i=0; i < 5; i++) {
-    stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*10)));
+    stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*15)));
   }
   console.log(stock);
 
@@ -111,12 +111,12 @@ function Product(name, price, quantity) {
 // И потом сортировать по возрастанию цены. (filter().sort()).
 // Функция возвращает новый массив - результат фильтрации.
 
-console.log(stock.at(0).quantity);
+function sortProduct () {
+  const result = stock.filter(value => (value.quantity > 5)); // Фильтрация по количеству
+  result.sort((a, b) => (a.price) - (b.price)); // Сортировка по возрастанию цены
+  return result;
+};
 
-// function sortProduct () {
-//   const result = stock.filter((product) => {
-//     product.quantity > 5;
-//   });
-// }
+const funcResult = sortProduct();
 
-// sortProduct()
+console.log(funcResult);
