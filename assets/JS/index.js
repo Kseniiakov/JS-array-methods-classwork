@@ -103,7 +103,8 @@
 // }
 
 //   for (i=0; i < 5; i++) {
-//     stock.push(new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*15)));
+//     let product = new Product(`name${i}`, Math.round(Math.random()*100),Math.round(Math.random()*15));
+//     stock.push(product);
 //   }
 //   console.log(stock);
 
@@ -147,18 +148,18 @@
 // Имена, возрасты, пол, и пароль случайны (пусть зависят от индекса 
 // ("username1", "username2" ...)
 
-function User(username, age, isMale, password) {
-  this.username = username
-  this.age = age
-  this.isMale = isMale
-  this.password = password
-};
+// function User(username, age, isMale, password) {
+//   this.username = username
+//   this.age = age
+//   this.isMale = isMale
+//   this.password = password
+// };
 
-const users = [];
+// const users = [];
 
-for (i = 0; i < 5; i++) {
-  let user = new User(`username${i}`, Math.floor(Math.random() * (40 - 20 + 1)) + 20, Boolean(Math.round(Math.random())), `password${i}`);
-  users.push(user);
-};
+// for (i = 0; i < 5; i++) {
+//   let user = new User(`username${i}`, Math.floor(Math.random() * (40 - 20 + 1)) + 20, Boolean(Math.round(Math.random())), `password${i}`);
+//   users.push(user);
+// };
 
-console.log(users);
+// console.log(users);
